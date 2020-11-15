@@ -71,7 +71,7 @@ def map_words(words):
     return mapped_words
 
 
-def get_logest_word(words):
+def get_longest_word(words):
     longest = words[0]
     for w1 in words:
         if len(w1) > len(longest):
