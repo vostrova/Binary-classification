@@ -104,7 +104,7 @@ def get_onehot(array_x):
     for row in array_x:
         tmp = []
         for char_no in row:
-            tmp.append(one_hot_encode(char_no))
+            tmp+=one_hot_encode(char_no)
         onehot.append(tmp)
     return onehot
 
