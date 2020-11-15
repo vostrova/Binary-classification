@@ -48,7 +48,7 @@ for word in train_words:
     for char in word:
         if char not in char_int:
             char_int[char] = i
-            i = i + 1
+            i +=1
 char_int['unknown'] = i
 
 print(len(unique_chars))
@@ -95,8 +95,8 @@ print("train_prepended_by_zeros: ",train_x[0], train_x[1])
 print("test_prepended_by_zeros: ", test_x[0], test_x[1])
 
 
-def one_hot_encode(char_no, all_chars):
-    return [1 if i == char_no else 0 for i in range(len(all_chars))]
+def one_hot_encode(char_no):
+    return [1 if i == char_no else 0 for i in range(len(unique_chars))]
 
 
 def get_onehot(array_x):
@@ -104,7 +104,7 @@ def get_onehot(array_x):
     for row in array_x:
         tmp = []
         for char_no in row:
-            tmp = tmp + one_hot_encode(char_no, unique_chars)
+            tmp = tmp + one_hot_encode(char_no)
         onehot.append(tmp)
     return onehot
 
