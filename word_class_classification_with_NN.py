@@ -121,7 +121,7 @@ train_y_np = np.array(train_y)
 input_dim = len(unique_chars) * longest_word
 
 model = Sequential()
-# first layer, "None" means that the input shape is any positive integer
+# first layer
 model.add(Dense(units=64, activation='relu', input_dim=input_dim))
 # hidden layer
 model.add(Dense(units=64, activation='relu'))
