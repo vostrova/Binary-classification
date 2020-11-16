@@ -128,7 +128,7 @@ model.compile(optimizer='adam',
               loss='binary_crossentropy',
               metrics=['accuracy'])
 
-model.fit(train_onehot_np, train_y_np, epochs=10, batch_size=32, validation_split=0.5, verbose=0)
+model.fit(train_onehot_np, train_y_np, epochs=10, batch_size=32, validation_split=0.2, verbose=0)
 
 test_onehot_np = np.array(test_onehot)
 test_y_np = np.array(test_y)
