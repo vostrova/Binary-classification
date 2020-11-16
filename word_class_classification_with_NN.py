@@ -121,13 +121,8 @@ train_y_np = np.array(train_y)
 input_dim = len(unique_chars) * longest_word
 
 model = Sequential()
-# first layer
 model.add(Dense(units=64, activation='relu', input_dim=input_dim))
-# hidden layer
-model.add(Dense(units=64, activation='relu'))
-# dropout after the hidden layer
 model.add(Dropout(0.3))
-# final layer
 model.add(Dense(units=1, activation='sigmoid'))
 model.compile(optimizer='adam',
               loss='binary_crossentropy',
