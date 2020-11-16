@@ -126,7 +126,7 @@ model.add(Dense(units=64, activation='relu', input_dim=input_dim))
 # hidden layer
 model.add(Dense(units=64, activation='relu'))
 # dropout after the hidden layer
-model.add(Dropout(0.1))
+model.add(Dropout(0.3))
 # final layer
 model.add(Dense(units=1, activation='sigmoid'))
 model.compile(optimizer='adam',
